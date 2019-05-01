@@ -6,7 +6,8 @@ ZetCode PyQt5 tutorial
 
 I am attempting to adapt this exercise
 to include two more buttons at the top
-left which behave similarly to the original
+left which behave similarly to the ones
+in the original exercise.
 
 In this example, we position two push
 buttons in the bottom-right corner
@@ -18,7 +19,6 @@ Website: zetcode.com
 Original Last edited: August 2017
 Adaptation date: 1 May 2019
 
-Testing
 
 """
 
@@ -49,9 +49,10 @@ class Example(QWidget):
         hbox1.addWidget(cancelButton)
 
         hbox2 = QHBoxLayout()
+        hbox2.addWidget(myButton1)
+        hbox2.addWidget(myButton2)
         hbox2.addStretch(1)
-        hbox2.addWidget(okButton)
-        hbox2.addWidget(cancelButton)
+
 
         vbox = QVBoxLayout()
         vbox.addLayout(hbox2)
