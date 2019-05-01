@@ -40,14 +40,23 @@ class Example(QWidget):
         okButton = QPushButton("OK")
         cancelButton = QPushButton("Cancel")
 
-        hbox = QHBoxLayout()
-        hbox.addStretch(1)
-        hbox.addWidget(okButton)
-        hbox.addWidget(cancelButton)
+        myButton1 = QPushButton("PushMe")
+        myButton2 = QPushButton("PullYou")
+
+        hbox1 = QHBoxLayout()
+        hbox1.addStretch(1)
+        hbox1.addWidget(okButton)
+        hbox1.addWidget(cancelButton)
+
+        hbox2 = QHBoxLayout()
+        hbox2.addStretch(1)
+        hbox2.addWidget(okButton)
+        hbox2.addWidget(cancelButton)
 
         vbox = QVBoxLayout()
+        vbox.addLayout(hbox2)
         vbox.addStretch(1)
-        vbox.addLayout(hbox)
+        vbox.addLayout(hbox1)
 
         self.setLayout(vbox)
 
